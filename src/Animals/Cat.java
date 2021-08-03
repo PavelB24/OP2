@@ -3,7 +3,8 @@ package Animals;
 import java.io.IOException;
 
 public class Cat extends Animal {
-    private static int counter;
+    private  int counter;
+
     public Cat(int age, String name) {
         super(age, name);
         counter++;
@@ -15,10 +16,11 @@ public class Cat extends Animal {
 
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public int getCounter(){
+
+    public int getCounter() {
         return counter;
     }
 
@@ -26,16 +28,10 @@ public class Cat extends Animal {
     @Override
     public void run(int meters) {
         if (meters <= 200) {
-            System.out.println("Кошка " +this.name + " пробежала " + meters + " метров");
+            System.out.println("Кошка " + this.name + " пробежала " + meters + " метров");
         } else {
-            try{
-                throw new IOException();}
-            catch (IOException e){
-                System.out.println("Кошка не может столько пробежать!");
-            }
-
+            System.out.println("Кошка не может столько пробежать!");
         }
-
     }
-
 }
+
