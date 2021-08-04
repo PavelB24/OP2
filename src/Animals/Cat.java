@@ -4,6 +4,7 @@ import java.io.IOException;
 
 public class Cat extends Animal {
     private  int counter;
+    private int maxRun = 200;
 
     public Cat(int age, String name) {
         super(age, name);
@@ -27,7 +28,7 @@ public class Cat extends Animal {
 
     @Override
     public void run(int meters) {
-        if (meters <= 200) {
+        if (meters <= maxRun) {
             System.out.println("Кошка " + this.name + " пробежала " + meters + " метров");
         } else {
             System.out.println("Кошка не может столько пробежать!");

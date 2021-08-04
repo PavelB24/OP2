@@ -4,6 +4,9 @@ import java.io.IOException;
 
 public class Dog extends Animal {
     private int counter;
+    private int maxRun = 500;
+    private int maxSwim = 10;
+
 
     public Dog(int age, String name) {
         super(age, name);
@@ -13,7 +16,7 @@ public class Dog extends Animal {
     @Override
     public void swim(int meters) {
 
-        if (meters <= 10) {
+        if (meters <= maxSwim) {
             System.out.println("Собака " + getName() + " проплыла " + meters + " метров");
         } else {
             System.out.println("Собака не может столько проплыть!");
@@ -31,7 +34,7 @@ public class Dog extends Animal {
 
     @Override
     public void run(int meters) {
-        if (meters <= 500) {
+        if (meters <= maxRun) {
             System.out.println("Собака " + this.name + " пробежала " + meters + " метров");
         } else {
             System.out.println("Собака не может столько пробежать!");
